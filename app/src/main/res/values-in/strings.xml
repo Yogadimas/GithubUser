@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Github User</string>
+
+    <string name="search_view_find">Cari</string>
+
+    <string name="daily_reminder_text_time">Pada jam 9.00 pagi</string>
+    <string name="daily_reminder_text_remind_me">Tolong ingatkan saya!</string>
+
+    <string name="menu_main_title_my_favorite">Favorit Saya</string>
+    <string name="menu_title_daily_reminder">Pengingat Harian</string>
+    <string name="menu_title_change_language">Ubah Bahasa</string>
+
+    <string name="title_followers">Pengikut</string>
+    <string name="title_following">Diikuti</string>
+
+    <string name="title_splash">Github\nUser</string>
+    <string name="title_detail_user">Detail Pengguna</string>
+    <string name="title_search_user">Cari Pengguna</string>
+    <string name="title_my_favorites">Favorite Saya</string>
+
+    <string name="msg_favorite_add">Tambahkan ke Favorite</string>
+    <string name="msg_favorite_remove">Hapus dari Favorite</string>
+    <string name="msg_no_result">Tidak ada hasil</string>
+
+    <string name="msg_notification">Ayo temukan kembali pengguna yang kamu suka!</string>
+    <string name="msg_reminder_activated">Pengingat Diaktifkan</string>
+    <string name="msg_reminder_disabled">Pengingat Dinonaktifkan</string>
+
+    <string name="widget_main_text_no_data">Tidak Ada Data</string>
+    <string name="widget_main_text_go_to_app">Menuju aplikasi</string>
+
+    <string name="widget_provider_delete">Widget Dihapus</string>
+    <string name="widget_provider_enabled">Widget Diaktifkan</string>
+    <string name="widget_provider_disabled">Widget Dinonaktifkan</string>
+
+    <string name="detail_can_be_employed">Sudah bisa\ndipekerjakan</string>
+    <string name="detail_can_t_be_employed">Belum bisa\ndipekerjakan</string>
+    <string name="detail_repositories">Gudang</string>
+    <string name="detail_gists">Inti</string>
+    <string name="detail_int_null_0">0</string>
+    <string name="detail_string_null">--</string>
+
+    <string name="item_id">Id :</string>
+
+    <string name="partial_no_followers_yet">Belum ada pengikut</string>
+    <string name="partial_no_one_has_followed_yet">Belum ada yang diikuti</string>
+    <string name="partial_no_one_has_been_favorited_yet">Belum ada yang/ndifavoritkan</string>
+
+    <string name="key_intent">KEY</string>
+    <string name="url_avatar_profile">https://avatars1.githubusercontent.com/u/</string>
+
+    <string name="todo">TODO</string>
+
+</resources>

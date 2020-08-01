@@ -1,0 +1,110 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/distance_all_16dp"
+            android:layout_marginTop="@dimen/distance_all_16dp"
+            android:layout_marginEnd="@dimen/distance_all_16dp"
+            android:layout_weight="0">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_black_round"
+                android:fontFamily="@font/mbold"
+                android:gravity="center_vertical"
+                android:text="@string/title_my_favorites"
+                android:textAlignment="center"
+                android:textColor="@color/whitePrimary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/distance_all_16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/distance_all_16dp"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <StackView
+                android:id="@+id/stack_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:loopViews="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/distance_all_16dp"
+            android:layout_weight="0"
+            android:background="@drawable/bg_white_secondary_round"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/text_to_app"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/distance_all_16dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/mmedium"
+                android:gravity="center"
+                android:text="@string/widget_main_text_go_to_app"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                tools:ignore="NestedWeights" />
+
+            <ImageButton
+                android:id="@+id/button_widget"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:background="@drawable/bg_black_white_stroke_round"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_arrow" />
+
+            <ImageView
+                android:id="@+id/image_github_widget"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:contentDescription="@string/todo"
+                android:padding="8dp"
+                android:src="@drawable/ic_github_black"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/partial_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:visibility="gone" />
+
+</FrameLayout>

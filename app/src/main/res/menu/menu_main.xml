@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/menu_main_title_my_favorite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_reminder"
+        android:title="@string/menu_title_daily_reminder"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_language"
+        android:title="@string/menu_title_change_language"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <include
+        layout="@layout/partial_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_all_16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/distance_all_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circle_image_profile"
+        app:layout_constraintTop_toTopOf="@+id/circle_image_profile" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/distance_all_16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_username"
+        tools:src="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:fontFamily="@font/mbold"
+        android:textColor="@color/whitePrimary"
+        android:textSize="@dimen/size_all_text_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Yogadimas" />
+
+    <LinearLayout
+        android:id="@+id/linear_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/circle_image_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circle_image_profile">
+
+        <TextView
+            android:id="@+id/text_yes_hire_able"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_all_4dp"
+            android:drawableTop="@drawable/ic_check"
+            android:drawablePadding="@dimen/distance_all_4dp"
+            android:fontFamily="@font/mmedium"
+            android:text="@string/detail_can_be_employed"
+            android:textAlignment="center"
+            android:textColor="@color/whitePrimary"
+            android:textSize="@dimen/size_all_text_14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_no_hire_able"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_all_4dp"
+            android:drawableTop="@drawable/ic_cross"
+            android:drawablePadding="@dimen/distance_all_4dp"
+            android:fontFamily="@font/mmedium"
+            android:text="@string/detail_can_t_be_employed"
+            android:textAlignment="center"
+            android:textColor="@color/whitePrimary"
+            android:textSize="@dimen/size_all_text_14sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circle_image_profile">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/distance_all_16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_repository"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/detail_int_null_0"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/detail_repositories"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/detail_int_null_0"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/title_followers"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/distance_all_16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/detail_int_null_0"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/title_following"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/distance_all_16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_gists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/detail_int_null_0"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mmedium"
+                android:text="@string/detail_gists"
+                android:textColor="@color/whitePrimary"
+                android:textSize="@dimen/size_all_text_14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_mail"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/detail_string_null"
+        android:textColor="@color/whitePrimary"
+        android:textSize="@dimen/size_all_text_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_website"
+        tools:text="yoga.d.pambudi.1@gmail.com" />
+
+    <TextView
+        android:id="@+id/text_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_company"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/detail_string_null"
+        android:textColor="@color/whitePrimary"
+        android:textSize="@dimen/size_all_text_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_location"
+        tools:text="Dicoding" />
+
+    <TextView
+        android:id="@+id/text_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="@dimen/distance_all_16dp"
+        android:drawableStart="@drawable/ic_pin"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/detail_string_null"
+        android:textColor="@color/whitePrimary"
+        android:textSize="@dimen/size_all_text_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_two"
+        tools:text="Semarang" />
+
+    <TextView
+        android:id="@+id/text_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_link"
+        android:drawablePadding="@dimen/distance_all_4dp"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/detail_string_null"
+        android:textColor="@color/whitePrimary"
+        android:textSize="@dimen/size_all_text_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_company"
+        tools:text="www.instagram.com/yogadimas85" />
+
+    <TextView
+        android:id="@+id/text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mmedium"
+        android:text="@string/detail_string_null"
+        android:textColor="@color/whitePrimary"
+        android:textSize="@dimen/size_all_text_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name"
+        tools:text="Yoga Dimas Pambudi" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

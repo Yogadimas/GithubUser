@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="size_all_text_18sp">18sp</dimen>
+    <dimen name="size_all_text_12sp">12sp</dimen>
+    <dimen name="distance_all_16dp">16dp</dimen>
+    <dimen name="distance_all_8dp">8dp</dimen>
+</resources>

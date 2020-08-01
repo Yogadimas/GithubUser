@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.fornewid:neumorphism:0.1.11@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21bfa974825bed55d3e4853bcc80f3c4/jetified-neumorphism-0.1.11/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21bfa974825bed55d3e4853bcc80f3c4/jetified-neumorphism-0.1.11/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.fornewid/neumorphism/0.1.11/771c0b3af118d4311ba000ae05920dc300b54b5f/neumorphism-0.1.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Github User</string>
+
+    <string name="search_view_find">Find</string>
+
+    <string name="daily_reminder_text_time">At 9.00 AM</string>
+    <string name="daily_reminder_text_remind_me">Please remind me!</string>
+
+    <string name="menu_main_title_my_favorite">My Favorites</string>
+    <string name="menu_title_daily_reminder">Daily Reminder</string>
+    <string name="menu_title_change_language">Change Language</string>
+
+    <string name="title_followers">Followers</string>
+    <string name="title_following">Following</string>
+
+    <string name="title_splash">Github\nUser</string>
+    <string name="title_detail_user">User Details</string>
+    <string name="title_search_user">Search User</string>
+    <string name="title_my_favorites">My Favorites</string>
+
+    <string name="msg_favorite_add">Add to Favorites</string>
+    <string name="msg_favorite_remove">Remove from Favorites</string>
+    <string name="msg_no_result">No Result</string>
+    <string name="msg_notification">Let\'s find the user you like again!</string>
+    <string name="msg_reminder_activated">The Reminder is Activated</string>
+    <string name="msg_reminder_disabled">The Reminder is Disabled</string>
+
+    <string name="widget_main_text_no_data">No Data</string>
+    <string name="widget_main_text_go_to_app">Go to app</string>
+
+    <string name="widget_provider_delete">Widget Deleted</string>
+    <string name="widget_provider_enabled">Widget Enabled</string>
+    <string name="widget_provider_disabled">Widget Disabled</string>
+
+    <string name="detail_can_be_employed">Can be\nemployed</string>
+    <string name="detail_can_t_be_employed">Can\'t be\nemployed</string>
+    <string name="detail_repositories">Repositories</string>
+    <string name="detail_gists">Gists</string>
+    <string name="detail_int_null_0">0</string>
+    <string name="detail_string_null">--</string>
+
+    <string name="item_id">Id :</string>
+
+    <string name="partial_no_followers_yet">No followers yet</string>
+    <string name="partial_no_one_has_followed_yet">No one has followed yet</string>
+    <string name="partial_no_one_has_been_favorited_yet">No one has been\nfavorited yet</string>
+
+    <string name="key_intent">KEY</string>
+    <string name="url_avatar_profile">https://avatars1.githubusercontent.com/u/</string>
+
+    <string name="todo">TODO</string>
+
+</resources>
