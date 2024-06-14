@@ -31,6 +31,7 @@ public class FollowingFragment extends Fragment {
     private FollowingViewModel mFollowingViewModel;
     private ItemViewModel mItemViewModel;
     private FollowingAdapter mFollowingAdapter;
+    private boolean onPause = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,16 +62,22 @@ public class FollowingFragment extends Fragment {
     private void getData() {
         mFollowingViewModel.setLoadEventFollowing(DetailActivity.sItem);
         mFollowingViewModel.getData().observe(getViewLifecycleOwner(), followingResponses -> {
-            mFollowingAdapter.setData(mFollowingResponses);
             mFollowingResponses.addAll(followingResponses);
+            if (mFollowingResponses.size() != followingResponses.size()) {
+                if (!onPause) {
+                    mFollowingResponses.clear();
+                    mFollowingResponses.addAll(followingResponses);
+                }
+            }
+            mFollowingAdapter.setData(mFollowingResponses);
             mRecyclerView.setAdapter(mFollowingAdapter);
             mFollowingAdapter.notifyDataSetChanged();
         });
         mItemViewModel.setLoadEventUser(DetailActivity.sItem);
         mItemViewModel.getData().observe(getViewLifecycleOwner(), ItemResponse -> {
-            if (ItemResponse.getFollowing() != 0) {
+            if (ItemResponse.getFollowing() != 0 || !mFollowingResponses.isEmpty()) {
                 mIncludeNoFollowing.setVisibility(View.GONE);
-            } else {
+            } else if (ItemResponse.getFollowing() == 0 && mFollowingResponses.isEmpty()) {
                 mIncludeNoFollowing.setVisibility(View.VISIBLE);
             }
         });
@@ -85,9 +92,16 @@ public class FollowingFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        mItemViewModel.setLoadEventUser(DetailActivity.sItem);
-        mFollowingViewModel.setLoadEventFollowing(DetailActivity.sItem);
+        if (mFollowingResponses.isEmpty()) {
+            mItemViewModel.setLoadEventUser(DetailActivity.sItem);
+            mFollowingViewModel.setLoadEventFollowing(DetailActivity.sItem);
+        }
+    }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        onPause = true;
     }
 
     private void showSelectedItem(FollowingResponse item) {

@@ -44,7 +44,7 @@
 
     <string name="partial_no_followers_yet">Belum ada pengikut</string>
     <string name="partial_no_one_has_followed_yet">Belum ada yang diikuti</string>
-    <string name="partial_no_one_has_been_favorited_yet">Belum ada yang/ndifavoritkan</string>
+    <string name="partial_no_one_has_been_favorited_yet">Belum ada yang\ndifavoritkan</string>
 
     <string name="key_intent">KEY</string>
     <string name="url_avatar_profile">https://avatars1.githubusercontent.com/u/</string>

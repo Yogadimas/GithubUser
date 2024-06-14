@@ -2,6 +2,7 @@ package com.yogadimas.githubuser.view.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class FollowerFragment extends Fragment {
     private FollowerViewModel mFollowerViewModel;
     private ItemViewModel mItemViewModel;
     private FollowerAdapter mFollowerAdapter;
+    private boolean onPause = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +39,7 @@ public class FollowerFragment extends Fragment {
 
         View mViewFollower = inflater.inflate(R.layout.fragment_follower,
                 container, false);
+
 
         mRecyclerView = mViewFollower.findViewById(R.id.rv_follower);
         mIncludeNoFollower = mViewFollower.findViewById(R.id.include_no_follower);
@@ -54,6 +57,7 @@ public class FollowerFragment extends Fragment {
         initRow();
         getData();
 
+
         return mViewFollower;
     }
 
@@ -62,14 +66,21 @@ public class FollowerFragment extends Fragment {
         mFollowerViewModel.setLoadEventFollower(DetailActivity.sItem);
         mFollowerViewModel.getData().observe(getViewLifecycleOwner(), followerResponse -> {
             mFollowerResponse.addAll(followerResponse);
+            if (mFollowerResponse.size() != followerResponse.size()) {
+                if (!onPause) {
+                    mFollowerResponse.clear();
+                    mFollowerResponse.addAll(followerResponse);
+                }
+            }
             mFollowerAdapter.setData(mFollowerResponse);
             mRecyclerView.setAdapter(mFollowerAdapter);
             mFollowerAdapter.notifyDataSetChanged();
+
         });
         mItemViewModel.getData().observe(getViewLifecycleOwner(), ItemResponse -> {
-            if (ItemResponse.getFollowers() != 0) {
+            if (ItemResponse.getFollowers() != 0 || !mFollowerResponse.isEmpty()) {
                 mIncludeNoFollower.setVisibility(View.GONE);
-            } else {
+            } else if (ItemResponse.getFollowers() == 0 && mFollowerResponse.isEmpty()) {
                 mIncludeNoFollower.setVisibility(View.VISIBLE);
             }
         });
@@ -83,9 +94,16 @@ public class FollowerFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        mItemViewModel.setLoadEventUser(DetailActivity.sItem);
-        mFollowerViewModel.setLoadEventFollower(DetailActivity.sItem);
+        if (mFollowerResponse.isEmpty()) {
+            mItemViewModel.setLoadEventUser(DetailActivity.sItem);
+            mFollowerViewModel.setLoadEventFollower(DetailActivity.sItem);
+        }
+    }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        onPause = true;
     }
 
     private void showSelectedItem(FollowerResponse item) {
